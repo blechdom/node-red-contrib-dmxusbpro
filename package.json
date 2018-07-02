@@ -8,7 +8,7 @@
     },
   "repository" : {
         "type":"git",
-        "url":"https://github.com/blechdom/node-red-contrib-nodes/node-red-contrib-dmxusbpro"
+        "url":"https://github.com/blechdom/node-red-contrib-dmxusbpro"
     },
   "author": "Kristin Grace Galvin",
   "email": "blechdom@gmail.com",
