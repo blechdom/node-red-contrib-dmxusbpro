@@ -13,7 +13,8 @@ Requires [Node-Red](http://nodered.org)
 ## Description
 
 * Sends DMX data through the Enntec DMXUSBPRO device
-* Adapted and simplified from the existing [node-dmx package](https://www.npmjs.com/package/dmx) requires node-serialport module (has a lot more functionality than included here)
+* Adapted, simplified, hacked from the existing [node-dmx package](https://www.npmjs.com/package/dmx) 
+* requires node-serialport module
 * node-red-contrib-dmxusbpro node takes an array of ints (0-255) as input.
 * node-red-contrib-dmxusbpro requires the serialport node library. Similarly, the serialport needs to be assigned, COM3, COM4, or /dev/ttyS0, etc
 * The DMX starting address is assignable in the object. This shifts where the preset array is stored in the Universe buffer.
