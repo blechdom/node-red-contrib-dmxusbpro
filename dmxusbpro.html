@@ -1,0 +1,42 @@
+<script type="text/javascript">
+    RED.nodes.registerType('dmxusbpro',{
+        category: 'function',
+        color: '#ffaaaa',
+        defaults: {
+            name: {value:""},
+            port: {value:"", required:true},
+            DMX_offset: {value:0, required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "light.png",
+        label: function() {
+            return this.name||"dmxusbpro";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="dmxusbpro">
+    <div class="form-row">
+        <label for="node-input-port"><i class="fa fa-random"></i> Port</label>
+        <input type="text" id="node-input-port" placeholder="COM3 or /dev/ttyS0">
+    </div>
+    <div class="form-row">
+        <label for="node-input-DMX_offset"><i class="fa fa-hashtag"></i> DMX Offset</label>
+        <input type="text" id="node-input-DMX_offset" placeholder="0">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+   
+</script>
+
+<script type="text/x-red" data-help-name="dmxusbpro">
+    <p>Sends DMX data through the Enntec DMXUSBPRO device</p>
+    <p>Adapted and simplified from the existing node-dmx package @ https://www.npmjs.com/package/dmx requires node-serialport module (has a lot more functionality than included here)</p>
+    <p>dmxusbpro node takes an array of ints as input.</p>
+    <p>dmxusbpro requires the serialport node library. Similarly, the serialport needs to be assigned, COM3, COM4, or /dev/ttyS0, etc</p>
+    <p>The DMX presets can be offset by a base DMX address. This changes where the preset is stored in the Universe</p>
+    <p>the dmxusbpro copies the preset array into a 512 size buffer/universe according to the offset in order to send.</p>
+</script>
