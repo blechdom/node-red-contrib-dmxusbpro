@@ -19,15 +19,13 @@ function DMX(device_id, current_universe) {
 		'stopbits': 2,
 		'parity': 'none'
 	}, function(err) {
-		console.log("dmx enttec driver device error:" + err);
+		if(err != null){
+			console.log("dmx enttec driver device error:" + err);
+		}
 	});
 }
 
 DMX.prototype.send_universe = function() {
-	if(!this.dev.isOpen()) {
-		console.log("dmx usb pro device is NOT open");
-		return
-	}
 	var hdr = Buffer([
 		ENTTEC_PRO_START_OF_MSG,
 		ENTTEC_PRO_SEND_DMX_RQ,
@@ -50,7 +48,8 @@ DMX.prototype.close = function(cb) {
 
 DMX.prototype.update = function(u, offset) {
 	for(var c in u) {
-		this.universe[(parseFloat(c)+parseFloat(offset)-parseFloat(2))] = u[c];
+		this.universe[(parseFloat(c)+parseFloat(offset)-parseFloat(1))] = u[c];
+		//this.universe[(parseFloat(c)+parseFloat(offset)-parseFloat(2))] = u[c];
 		//console.log("c: " + c + " u " + JSON.stringify(u) + " u[c] " + u[c]);
 	}
 	this.send_universe()

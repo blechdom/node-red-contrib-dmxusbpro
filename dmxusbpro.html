@@ -5,7 +5,7 @@
         defaults: {
             name: {value:""},
             port: {value:"", required:true},
-            DMX_offset: {value:0, required:true}
+            DMX_starting_address: {value:1, required:true}
         },
         inputs:1,
         outputs:1,
@@ -22,8 +22,8 @@
         <input type="text" id="node-input-port" placeholder="COM3 or /dev/ttyS0">
     </div>
     <div class="form-row">
-        <label for="node-input-DMX_offset"><i class="fa fa-hashtag"></i> DMX Offset</label>
-        <input type="text" id="node-input-DMX_offset" placeholder="0">
+        <label for="node-input-DMX_starting_address"><i class="fa fa-hashtag"></i> DMX Starting Address</label>
+        <input type="text" id="node-input-DMX_starting_address" placeholder="1">
     </div>
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>

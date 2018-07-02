@@ -1,7 +1,7 @@
 {
   "name": "node-red-contrib-dmxusbpro",
   "version": "1.0.0",
-  "description": "node-red driver for Enntec DMX USB Pro - adapted and simplefied from node-dmx package https://www.npmjs.com/package/dmx requires node-serialport module",
+  "description": "node-red driver for Enntec DMX USB Pro - adapted and simplified from node-dmx package https://www.npmjs.com/package/dmx requires node-serialport module",
   "main": "dmxusbpro.js",
   "dependencies"  : {
         "serialport"   : "^6.2.0"

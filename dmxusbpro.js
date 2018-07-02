@@ -7,7 +7,7 @@ module.exports = function(RED) {
         RED.nodes.createNode(this,n);
         var node = this;
         this.port = n.port || "COM3";
-        this.DMX_offset = n.DMX_offset || 0;
+        this.DMX_offset = n.DMX_starting_address || 1;
         var current_universe_buffer = new Buffer(512);
         console.log("this in DMXout: " + JSON.stringify(this));
         var current_universe =  [];
