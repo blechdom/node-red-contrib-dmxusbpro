@@ -2,9 +2,6 @@
 
 A simple [Node-Red](http://nodered.org) driver for Enntec DMX USB PRO.
 
-[![NodeRed](https://img.shields.io/badge/Node--Red-0.16.2-red.svg)](http://nodered.org)
-[![NodeJS](https://img.shields.io/badge/Node.js-6.10.2-brightgreen.svg)](https://nodejs.org)
-
 ## Pre-requisites
 
 Requires [Node-Red](http://nodered.org)
