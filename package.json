@@ -6,6 +6,7 @@
   "dependencies"  : {
         "serialport"   : "^6.2.0"
     },
+  "keywords": [ "node-red" ],
   "repository" : {
         "type":"git",
         "url":"https://github.com/blechdom/node-red-contrib-dmxusbpro.git"
